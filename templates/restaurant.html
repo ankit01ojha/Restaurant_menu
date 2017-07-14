@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1> The Best restaurants in  the City</h1>
+<h2>--------------------------------------------------------</h2>
+    <form action="{{ url_for('restaurant', restaurant=restaurant) }}">
+        {% for i in restaurant %}
+            <h3>{{ i.name }}</h3>
+            <form action="{{ url_for('restaurantmenu', restaurant_id=i.id)  }}">
+            <input type="submit" style="font-size:8pt;color:white;background-color:dodgerblue;border:2px solid #336600;padding:6px" value="Check It Out">
+                </br></br>
+            </form>
+        {% endfor %}
+    </form>
+</body>
+</html>
