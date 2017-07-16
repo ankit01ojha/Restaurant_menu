@@ -1,18 +1,40 @@
 <html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
 <body>
-
+    <div class='pane'>
+        <div class='header'>
     <h1>{{ restaurant.name }}</h1>
+        </div>
     <form action="{{ url_for('newMenuItem', restaurant_id=restaurant.id) }}">
-
         <input type="submit"  style="font-size:15pt;color:white;background-color:green;border:2px solid #336600;padding:6px" value="Add new menu">
     </form>
-    {% for i in items %}
-    {{ i.name }} </br>
-    {{ i.price }} </br>
-    {{ i.description }} </br></br>
-        <a href="{{ url_for('editMenuItem', restaurant_id=restaurant.id, menu_id=i.id) }}">Edit</a></br>
-        <a href="{{ url_for('deleteMenuItem', restaurant_id=restaurant.id, menu_id=i.id) }}">Delete</a></br></br>
-    {% endfor %}
+    <div class='flash'>
+    {% with message=get_flashed_messages() %}
+    {% if message %}
 
+        <ul>
+            {% for message in message %}
+            <li><strong>{{ message }}</strong></li>
+            {% endfor %}
+            {% endif %}
+    {% endwith %}
+        </ul>
+    </div>
+    {% for i in items %}
+        <h3>{{ i.name }}</h3>
+    {{ i.price }} </br>
+    {{ i.description }} </br>
+        <form action="{{ url_for('editMenuItem', restaurant_id=restaurant.id, menu_id=i.id) }}">
+        <input type="submit"  style="font-size:8pt;color:white;background-color:darkgray;border:2px solid #336600;padding:5px" value="Edit">
+    </form>
+        <form action="{{ url_for('editMenuItem', restaurant_id=restaurant.id, menu_id=i.id) }}">
+        <input type="submit"  style="font-size:8pt;color:white;background-color:red;border:2px solid #336600;padding:5px" value="Delete">
+    </form>
+        </br>
+    {% endfor %}
+    </div>
 </body>
 </html>
