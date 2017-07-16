@@ -1,0 +1,14 @@
+body, html {
+    height: 200%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("Restaurants.jpg");    /* Full height */
+    height: 200%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
