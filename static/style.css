@@ -1,0 +1,30 @@
+body            {
+
+    font-family: sans-serif; background-color: whitesmoke;}
+ h1, h2, h4         {color: blueviolet;}
+ h3                 {color: chocolate;}
+h1, h2          {font-family: 'Arial', serif; margin: 0;}
+h1              {
+    border-bottom:2px solid #000000;}
+h2              {font-size: 1.2em;}
+
+p               {
+    color: #000000;}
+
+a {text-decoration: none;
+    color: #ffffcc; font-size: .75em;}
+
+.pane {position:absolute; left: 25%;
+    border: 2px solid black; border-radius: 20px; padding: 5px; margin: 5px; border-color: #000000;}
+
+.header         {left:50%; text-aling:center;}
+.name p {width:50%; display:inline-block; float:left;
+    color: #7fffd4;}
+.description p {
+    color: #000000;}
+.price p {text-align: right; width:50%; float: right;color:#000000;}
+
+.flash          {
+    background: #cee5f5;}
+
+
