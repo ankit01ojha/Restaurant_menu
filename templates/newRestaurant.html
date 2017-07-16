@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+<html>
 <body>
-$END$
+    <h1>New Restaurant </h1>
+    <form action="{{ url_for('newRestaurant', restaurant=restaurant) }}" method="POST">
+        <input type="text" name="name" placeholder="Enter the name">
+        <input type="submit" style="font-size:8pt;color:white;background-color:greenyellow;border:2px solid #336600;padding:6px" value="Create">
+
+    </form>
 </body>
 </html>
