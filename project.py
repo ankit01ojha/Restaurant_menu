@@ -1,3 +1,7 @@
+#Web app made on Flask
+#Author: Ankit Raj Ojha
+
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
@@ -112,3 +116,6 @@ if __name__=='__main__':
     app.secret_key='super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0',port=5000)
+
+
+#Source : Udacity
