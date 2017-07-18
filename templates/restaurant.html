@@ -8,12 +8,23 @@
 
 <h1> The Best restaurants in  the City</h1>
 <h2>--------------------------------------------------------</h2>
+<form action="{{ url_for('newRestaurant', restaurant=restaurant) }}">
+        <input type="submit" style="font-size:12pt;color:black;background-color:#ffffcc;border:2px solid #336600;padding:6px" value="Add new Restaurant">
+
+    </form>
     <form action="{{ url_for('restaurant', restaurant=restaurant) }}">
         {% for i in restaurant %}
             <h3>{{ i.name }}</h3>
             <form action="{{ url_for('restaurantmenu', restaurant_id=i.id)  }}">
             <input type="submit" style="font-size:8pt;color:white;background-color:dodgerblue;border:2px solid #336600;padding:6px" value="Check It Out">
-                </br></br>
+            </form>
+
+            <form action="{{ url_for('editRestaurant', restaurant_id=i.id) }}">
+            <input type="submit" style="font-size:8pt;color:gray;background-color:white;border:2px solid #336600;padding:6px" value="Edit">
+            </form>
+
+            <form action="{{ url_for('deleteRestaurant', restaurant_id=i.id) }}">
+            <input type="submit" style="font-size:8pt;color:red;background-color:white;border:2px solid #336600;padding:6px" value="Delete">
             </form>
         {% endfor %}
     </form>
