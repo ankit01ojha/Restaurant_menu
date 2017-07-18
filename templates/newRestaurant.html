@@ -1,10 +1,19 @@
 <html>
 <body>
     <h1>New Restaurant </h1>
-    <form action="{{ url_for('newRestaurant', restaurant=restaurant) }}" method="POST">
+    <form action="{{ url_for('newRestaurant') }}" method="POST">
         <input type="text" name="name" placeholder="Enter the name">
         <input type="submit" style="font-size:8pt;color:white;background-color:greenyellow;border:2px solid #336600;padding:6px" value="Create">
-
     </form>
+    {% with message=get_flashed_messages() %}
+    {% if message %}
+
+        <ul>
+            {% for message in message %}
+            <li><strong>{{ message }}</strong></li>
+            {% endfor %}
+            {% endif %}
+    {% endwith %}
+
 </body>
 </html>
