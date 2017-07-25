@@ -8,6 +8,9 @@
 
 <h1> The Best restaurants in  the City</h1>
 <h2>--------------------------------------------------------</h2>
+<form action="{{ url_for('logout') }}">
+  <input type="submit" style="font-size:12pt;color:white;background-color:#2980B9;border:2px solid #336600;padding:6px;float: right" value="LogOut">
+</form>
 <form action="{{ url_for('newRestaurant', restaurant=restaurant) }}">
         <input type="submit" style="font-size:12pt;color:black;background-color:#ffffcc;border:2px solid #336600;padding:6px" value="Add new Restaurant">
 
