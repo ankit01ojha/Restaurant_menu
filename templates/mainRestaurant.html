@@ -17,7 +17,7 @@
             <h3>{{ i.name }}</h3>
             <form action="{{ url_for('mainRestaurantmenu', restaurant_id=i.id)  }}">
             <input type="submit" style="font-size:8pt;color:white;background-color:dodgerblue;border:2px solid #336600;padding:6px" value="Check It Out">
-            </form>
+            
         {% endfor %}
 </div>
 </body>

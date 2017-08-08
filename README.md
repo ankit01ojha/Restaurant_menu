@@ -14,7 +14,9 @@ First you need to install things-
 2. Run ```lotsofmenus.py```. This will add menus in the database.
 3. Run ```userdatabase.py``` to create a database for the user userdata.db .
 4. Run ```loginuser.py``` to add the users in the userdatbase.
-5. run ```project.py``` to run the project in the localhost.
+5. Run ```project.py``` to run the project in the localhost.
+
+After Running all the above commands, in your web browser open ```localhost:5000/mainrestaurant```. This will the Main Restaurant page for the non owner's. After logging in you can add/edit/delete Restaurants and menus. Password for the login is right there in files find it( they are not hashed). For security purpose it should be hashed.
 
 ## Run the old version-
 
